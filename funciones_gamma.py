@@ -1,6 +1,5 @@
 from matplotlib import pyplot as plt
 import numpy as np
-import sys
 
 def g_gamma(x,z):
     """
