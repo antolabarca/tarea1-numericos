@@ -22,8 +22,10 @@ def g(u,z):
     """
     return ((1/u) - 1)**(z-1) * np.exp(1 - (1/u)) * 1/(u**2)
 
-z = 0.5
-x = np.linspace(0,1,num=200)
+k = 4.551
+z = k/2
+x = np.linspace(0, 70, num=200)
+u = np.linspace(0, 1, num=200)
 
 plt.clf()
 
@@ -31,12 +33,12 @@ plt.figure(1)
 plt.plot(x, g_gamma(x,z))
 plt.xlabel('x')
 plt.ylabel('$g_{\Gamma}(x,z)$')
-plt.title("$g_{\Gamma}(x,z)$ con $z=0.5$ fijo")
+plt.title("$g_{\Gamma}(x,z)$ con $z=k/2$ fijo y $x \in [0, 70]$")
 
 plt.figure(2)
-plt.plot(x, g(x,z))
-plt.xlabel('x')
-plt.ylabel('$g(x,z)$')
-plt.title("$g(x,z)$ con $z=0.5$ fijo")
+plt.plot(u, g(u,z))
+plt.xlabel('u')
+plt.ylabel('$g(u,z)$')
+plt.title("$g(u,z)$ con $z=k/2$ fijo y $u \in [0,1]$")
 
 plt.show()
