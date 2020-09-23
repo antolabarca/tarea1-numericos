@@ -38,25 +38,26 @@ def gamma(z, tol):
         eps: la precision relativa deseada
     """
     n=8
-    In = gamma_n(z,n)
-    I2n = gamma_n(z, 2*n)
+    Gn = gamma_n(z,n)
+    G2n = gamma_n(z, 2*n)
 
-    while abs((I2n - In)/In) >= tol:
+    while abs((G2n - Gn)/Gn) >= tol:
         n *=2
-        In = I2n
-        I2n = gamma_n(z, 2*n)
+        Gn = G2n
+        G2n = gamma_n(z, 2*n)
     
-    return I2n
+    return G2n
 
 z = np.linspace(0, 12, num=100)
 z_int = np.arange(13)
 
+#muestra los primeros 12 factoriales y gamma para esos numeros, y la diferencia entre ambos
 for i in range(1,12):
-    gam=gamma(i, 0.0001)
+    gam=gamma(i, 0.00001)
     fact=math.factorial(i-1)
     print("gamma("+str(i)+"): ")
     print(gam)
-    print(str(i)+"-1! :")
+    print("("+str(i)+"-1)! :")
     print(fact)
     print("Diferencia:" + str(abs(gam-fact)))
     print(" ")
