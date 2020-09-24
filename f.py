@@ -35,12 +35,12 @@ def f(a, tol):
         :param tol: la precision relativa deseada
     """
     n=8
-    fn = f_n(z,n)
-    f2n = f_n(z, 2*n)
+    fn = f_n(a,n)
+    f2n = f_n(a, 2*n)
 
     while abs((f2n - fn)/fn) >= tol:
         n *=2
         fn = f2n
-        f2n = f_n(z, 2*n)
+        f2n = f_n(a, 2*n)
     
     return f2n
