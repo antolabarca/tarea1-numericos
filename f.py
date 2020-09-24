@@ -2,6 +2,7 @@ from chi2 import chi2
 import numpy as np
 from matplotlib import pyplot as plt
 
+
 def f_n(a,n):
     """
     Calcula la funcion f(a), es decir, la integral de chi^2 entre 0 y a, para n intervalos, usando la regla de Simpson
@@ -44,3 +45,25 @@ def f(a, tol):
         f2n = f_n(a, 2*n)
     
     return f2n
+
+
+def f_95(a, tol):
+    """
+    Calcula el valor de f(a,tol)-0.95 para poder utilizar un algoritmo que busque 0s de una funcion y encontrar
+    el valor de a que hace que f(a,tol)=0.95
+
+    Params:
+        :param a: el valor de a para el que se quiere calcular f, es decir, el lim superior de la integral
+        :param tol: la tolerancia relativa deseada
+
+    """
+    return f(a,tol) - 0.95
+
+a = np.linspace(0,30,50)
+b = np.array([f_95(ai, 0.01) for ai in a])
+
+plt.clf()
+plt.plot(a, b)
+plt.xlabel("x")
+plt.ylabel("$f_{0.95}(a)$")
+plt.show()
