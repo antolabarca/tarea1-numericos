@@ -16,10 +16,10 @@ def f_n(a,n):
     s = 0
     s += chi2(0) 
     for i in range(1, n-1):
-        chi2i = chi2(2*i*delta_x, z)
+        chi2i = chi2(2*i*delta_x)
         s +=2*chi2i
     for i in range(1, n-1):
-        chi2i1 = chi2((2*i + 1)*delta_x, z)
+        chi2i1 = chi2((2*i + 1)*delta_x)
         s +=4*chi2i1
-    s +=chi2(1, z)
+    s +=chi2(a)
     return s*(delta_x/3)
