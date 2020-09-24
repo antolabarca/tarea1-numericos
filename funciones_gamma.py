@@ -30,14 +30,12 @@ u = np.linspace(0, 1, num=200)
 
 #plt.figure(1)
 #plt.plot(x, g_gamma(x,z))
-#plt.xlabel('x')
-#plt.ylabel('$g_{\Gamma}(x,z)$')
-#plt.title("$g_{\Gamma}(x,z)$ con $z=k/2$ fijo y $x \in [0, 70]$")
+#plt.xlabel('x', fontsize=16)
+#plt.ylabel('$g_{\Gamma}(x,z)$', fontsize=16)
 
 #plt.figure(2)
 #plt.plot(u, g(u,z))
-#plt.xlabel('u')
-#plt.ylabel('$g(u,z)$')
-#plt.title("$g(u,z)$ con $z=k/2$ fijo y $u \in [0,1]$")
+#plt.xlabel('u', fontsize=16)
+#plt.ylabel('$g(u,z)$', fontsize=16)
 
 #plt.show()
