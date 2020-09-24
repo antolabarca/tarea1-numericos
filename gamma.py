@@ -50,8 +50,6 @@ def gamma(z, tol):
     
     return G2n
 
-#z = np.linspace(0, 12, num=100)
-#z_int = np.arange(13)
 
 #muestra los primeros 12 factoriales y gamma para esos numeros, y la diferencia entre ambos
 #for i in range(1,13):
