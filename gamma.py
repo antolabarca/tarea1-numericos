@@ -41,19 +41,19 @@ def gamma(z, tol):
     """
     n=8
     Gn = gamma_n(z,n)
-    G2n = gamma_n(z, 2*n)
+    G2n = gamma_n(z,2*n)
+    c=1
 
     while abs((G2n - Gn)/Gn) >= tol:
         n *=2
         Gn = G2n
         G2n = gamma_n(z, 2*n)
-    
+        c+=1
     return G2n
-
 
 #muestra los primeros 12 factoriales y gamma para esos numeros, y la diferencia entre ambos
 #for i in range(1,13):
- #   gam=gamma(i, 0.00000005)
+ #   gam=gamma(i, 0.00000001)
  #   fact=math.factorial(i-1)
  #   print("gamma("+str(i)+"): ")
  #   print(gam)

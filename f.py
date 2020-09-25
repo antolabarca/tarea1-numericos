@@ -59,11 +59,14 @@ def f_95(a, tol):
     """
     return f(a,tol) - 0.95
 
-a = np.linspace(0,30,50)
-b = np.array([f_95(ai, 0.01) for ai in a])
+#a = np.linspace(0,30,50)
+#print(a)
+#b = np.array([f_95(ai, 0.000001) for ai in a])
 
-plt.clf()
-plt.plot(a, b)
-plt.xlabel("x")
-plt.ylabel("$f_{0.95}(a)$")
-plt.show()
+#plt.clf()
+#plt.plot(a, b, label="f(a)")
+#plt.xlabel("x", fontsize=16)
+#plt.ylabel("$f_{0.95}(a)$", fontsize=16)
+#plt.axhline(0,color='g', label="y=0")
+#plt.legend(loc="lower right")
+#plt.show()

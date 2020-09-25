@@ -2,8 +2,10 @@ from gamma import gamma
 import numpy as np
 from matplotlib import pyplot as plt
 
+print("poto")
 k = 4.551
-gam = gamma(k/2, 0.0000001)
+gam = gamma(k/2, 0.00000001)
+print("uwus")
 
 def chi2(x):
     """
