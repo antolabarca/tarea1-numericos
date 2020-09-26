@@ -37,7 +37,7 @@ val_a.append(a[0])
 iters.append(a[1])
 val_f.append(a[2])
 
-for i in range(1, 5):
+for i in range(1, 11):
     a = cero(f_95, chi2, val_a[i-1], 10**(-i)) #se calcula para el valor obtenido anteriormente de a para mayor rapidez
 
     #se agregan los nuevos valores a los respectivos arreglos
@@ -54,10 +54,10 @@ print(val_f)
 #grafico de precision vs iteraciones
 plt.clf()
 f, ax = plt.subplots()
-plt.plot(range(5), iters, 'ro')
+plt.plot(range(11), iters, 'ro')
 plt.xlabel("precision", fontsize=16)
 plt.ylabel("cantidad de iteraciones", fontsize=16)
-ax.set_xticks(range(5))
-ax.set_xticklabels(["1", "$10^{-1}$", "$10^{-2}$", "$10^{-3}$", "$10^{-4}$", "$10^{-5}$"])
+ax.set_xticks(range(11))
+ax.set_xticklabels(["1", "$10^{-1}$", "$10^{-2}$", "$10^{-3}$", "$10^{-4}$", "$10^{-5}$", "$10^{-6}$", "$10^{-7}$", "$10^{-8}$", "$10^{-9}$", "$10^{-10}$"])
 
 plt.show()
