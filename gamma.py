@@ -54,7 +54,7 @@ def gamma(z, tol):
 #muestra los primeros 12 factoriales y gamma para esos numeros, y la diferencia entre ambos
 #for i in range(1,13):
  #   gam=gamma(i, 0.00000001)
- #   fact=math.factorial(i-1)
+ #  fact=math.factorial(i-1)
  #   print("gamma("+str(i)+"): ")
  #   print(gam)
  #   print("("+str(i)+"-1)! :")

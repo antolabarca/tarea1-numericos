@@ -2,10 +2,8 @@ from gamma import gamma
 import numpy as np
 from matplotlib import pyplot as plt
 
-print("poto")
 k = 4.551
 gam = gamma(k/2, 0.00000001)
-print("uwus")
 
 def chi2(x):
     """
@@ -18,8 +16,8 @@ def chi2(x):
     return x**((k/2-1)) * np.exp(-x/2) * (1/denom)
 
 
-#x=np.linspace(0,25, 100)
-#plt.plot(x, chi2(x))
-#plt.xlabel("x", fontsize=16)
-#plt.ylabel("$\chi ^2(x)$", fontsize=16)
-#plt.show()
+x=np.linspace(0,25, 100)
+plt.plot(x, chi2(x))
+plt.xlabel("x", fontsize=16)
+plt.ylabel("$\chi ^2(x)$", fontsize=16)
+plt.show()

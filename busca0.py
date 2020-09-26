@@ -2,7 +2,6 @@ from f import f_95
 from chi2 import chi2
 from matplotlib import pyplot as plt
 
-print("uwus")
 
 def cero(f, df, x0, tol):
     """
@@ -37,27 +36,39 @@ val_a.append(a[0])
 iters.append(a[1])
 val_f.append(a[2])
 
-for i in range(1, 11):
+for i in range(1, 16):
     a = cero(f_95, chi2, val_a[i-1], 10**(-i)) #se calcula para el valor obtenido anteriormente de a para mayor rapidez
 
     #se agregan los nuevos valores a los respectivos arreglos
     val_a.append(a[0])
     iters.append(a[1]+iters[i-1]) #se suman las iteraciones para el valor obtenido de a, ya que se está reutilizando el cálculo
     val_f.append(a[2])
-    print(i)
+
 
 #prints:
 print(val_a)
 print(iters)
 print(val_f)
 
-#grafico de precision vs iteraciones
+
 plt.clf()
+
+#grafico de precision vs iteraciones
+plt.figure(1)
 f, ax = plt.subplots()
-plt.plot(range(11), iters, 'ro')
+plt.plot(range(16), iters, 'ro')
 plt.xlabel("precision", fontsize=16)
 plt.ylabel("cantidad de iteraciones", fontsize=16)
-ax.set_xticks(range(11))
-ax.set_xticklabels(["1", "$10^{-1}$", "$10^{-2}$", "$10^{-3}$", "$10^{-4}$", "$10^{-5}$", "$10^{-6}$", "$10^{-7}$", "$10^{-8}$", "$10^{-9}$", "$10^{-10}$"])
+ax.set_xticks(range(16))
+ax.set_xticklabels(["1", "$10^{-1}$", "$10^{-2}$", "$10^{-3}$", "$10^{-4}$", "$10^{-5}$", "$10^{-6}$", "$10^{-7}$", "$10^{-8}$", "$10^{-9}$", "$10^{-10}$", "$10^{-11}$", "$10^{-12}$", "$10^{-13}$", "$10^{-14}$", "$10^{-15}$"])
+
+#grafico de precision vs a
+plt.clf()
+f, ax = plt.subplots()
+plt.plot(range(16), val_a, 'ro')
+plt.xlabel("precision", fontsize=16)
+plt.ylabel("valor de $a$ obtenido", fontsize=16)
+ax.set_xticks(range(16))
+ax.set_xticklabels(["1", "$10^{-1}$", "$10^{-2}$", "$10^{-3}$", "$10^{-4}$", "$10^{-5}$", "$10^{-6}$", "$10^{-7}$", "$10^{-8}$", "$10^{-9}$", "$10^{-10}$", "$10^{-11}$", "$10^{-12}$", "$10^{-13}$", "$10^{-14}$", "$10^{-15}$"])
 
 plt.show()
