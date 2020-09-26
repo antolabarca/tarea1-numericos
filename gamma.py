@@ -52,12 +52,12 @@ def gamma(z, tol):
     return G2n
 
 #muestra los primeros 12 factoriales y gamma para esos numeros, y la diferencia entre ambos
-#for i in range(1,13):
- #   gam=gamma(i, 0.00000001)
- #  fact=math.factorial(i-1)
- #   print("gamma("+str(i)+"): ")
- #   print(gam)
- #   print("("+str(i)+"-1)! :")
- #   print(fact)
- #   print("Diferencia:" + str(abs(gam-fact)))
- #   print(" ")
+for i in range(1,13):
+    gam=gamma(i, 0.00000001)
+    fact=math.factorial(i-1)
+    print("gamma("+str(i)+"): ")
+    print(gam)
+    print("("+str(i)+"-1)! :")
+    print(fact)
+    print("Diferencia:" + str(abs(gam-fact)))
+    print(" ")

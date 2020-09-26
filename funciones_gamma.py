@@ -26,16 +26,18 @@ z = k/2
 x = np.linspace(0, 70, num=200)
 u = np.linspace(0, 1, num=200)
 
-#plt.clf()
 
-#plt.figure(1)
-#plt.plot(x, g_gamma(x,z))
-#plt.xlabel('x', fontsize=16)
-#plt.ylabel('$g_{\Gamma}(x,z)$', fontsize=16)
+#figuras:
+plt.clf()
 
-#plt.figure(2)
-#plt.plot(u, g(u,z))
-#plt.xlabel('u', fontsize=16)
-#plt.ylabel('$g(u,z)$', fontsize=16)
+plt.figure(1)
+plt.plot(x, g_gamma(x,z))
+plt.xlabel('x', fontsize=16)
+plt.ylabel('$g_{\Gamma}(x,z)$', fontsize=16)
 
-#plt.show()
+plt.figure(2)
+plt.plot(u, g(u,z))
+plt.xlabel('u', fontsize=16)
+plt.ylabel('$g(u,z)$', fontsize=16)
+
+plt.show()
